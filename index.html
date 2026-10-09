@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TypeTasks - Task Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>TypeTasks</h1>
+      <p>A type-safe task management system</p>
+    </header>
+
+    <main>
+      <!-- Task Creation Form -->
+      <form id="task-form" class="task-form">
+        <input 
+          type="text" 
+          id="task-title-input" 
+          placeholder="What needs to be done?" 
+          required 
+          autocomplete="off"
+        />
+        <button type="submit" id="add-btn">Add Task</button>
+      </form>
+
+      <!-- Filter Controls -->
+      <section class="filters">
+        <button class="filter-btn active" data-status="all">All</button>
+        <button class="filter-btn" data-status="todo">To Do</button>
+        <button class="filter-btn" data-status="in-progress">In Progress</button>
+        <button class="filter-btn" data-status="done">Done</button>
+      </section>
+
+      <!-- Task List -->
+      <ul id="task-list" class="task-list"></ul>
+    </main>
+  </div>
+
+  <!-- Load compiled ES module script -->
+  <script type="module" src="app.js"></script>
+</body>
+</html>
